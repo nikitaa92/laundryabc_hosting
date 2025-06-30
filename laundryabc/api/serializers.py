@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from laundryabc_app.models import PaketLaundry, KategoriLayanan
+from laundryabc_app.models import PaketLaundry, KategoriLayanan, Customer
 
 class PaketLaundrySerializer(serializers.ModelSerializer):
     class Meta:
@@ -9,4 +9,9 @@ class PaketLaundrySerializer(serializers.ModelSerializer):
 class KategoriLayananSerializer(serializers.ModelSerializer):
     class Meta:
         model = KategoriLayanan
+        fields = '__all__'
+
+class CustomerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Customer
         fields = '__all__'

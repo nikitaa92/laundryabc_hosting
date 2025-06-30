@@ -4,8 +4,8 @@ from rest_framework import status, permissions
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from django.http import HttpResponse
 
-from laundryabc_app.models import PaketLaundry,KategoriLayanan
-from api.serializers import PaketLaundrySerializer, KategoriLayananSerializer
+from laundryabc_app.models import PaketLaundry,KategoriLayanan,Customer
+from api.serializers import PaketLaundrySerializer, KategoriLayananSerializer, CustomerSerializer
 
 class PaketLaundryGetPost(ListCreateAPIView):
     queryset = PaketLaundry.objects.all()
@@ -22,3 +22,11 @@ class KategoriLayananGetPost(ListCreateAPIView):
 class KategoriLayananGetUpDel(RetrieveUpdateDestroyAPIView):
     queryset = KategoriLayanan.objects.all()
     serializer_class = KategoriLayananSerializer
+
+class CustomerGetPost(ListCreateAPIView):
+    queryset = Customer.objects.all()
+    serializer_class = CustomerSerializer
+
+class CustomerGetUpDel(RetrieveUpdateDestroyAPIView):
+    queryset = Customer.objects.all()
+    serializer_class = CustomerSerializer
