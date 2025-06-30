@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-vp$wx9hng_o1yusw6msiw0m+^f54h%16rmslx$c#av^nyul_c9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,9 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'laundryabc_app',
+    #'api'
     'rest_framework',
     'django_filters',
+    'corsheaders',
+
 ]
+
+AUTH_USER_MODEL='laundryabc_app.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
