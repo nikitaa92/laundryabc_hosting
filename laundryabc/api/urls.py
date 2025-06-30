@@ -8,6 +8,6 @@ urlpatterns = [
     path('paket/<int:pk>', PaketLaundryGetUpDel.as_view()),  # GET single + PUT + DELETE
     path('kategori', KategoriLayananGetPost.as_view()),            # GET all + POST
     path('kategori/<int:pk>', KategoriLayananGetUpDel.as_view()),  # GET single + PUT + DELETE   
-    path('customer', CustomerGetUpDel.as_view()),            # GET all + POST
+    path('customer', CustomerGetPost.as_view()),            # GET all + POST
     path('customer/<int:pk>', CustomerGetUpDel.as_view()),  # GET single + PUT + DELETE   
 ]
