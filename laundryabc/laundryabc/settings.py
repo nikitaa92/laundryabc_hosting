@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 
 ]
 
-# AUTH_USER_MODEL='laundryabc_app.User'
+AUTH_USER_MODEL='laundryabc_app.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
