@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import PaketLaundry
+from .models import PaketLaundry,User
 
+admin.site.register(User)
 # Registrasi model agar muncul di halaman admin
 admin.site.register(PaketLaundry)
 
