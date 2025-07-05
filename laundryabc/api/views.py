@@ -7,6 +7,11 @@ from django.http import HttpResponse
 from laundryabc_app.models import PaketLaundry,KategoriLayanan,Customer
 from api.serializers import PaketLaundrySerializer, KategoriLayananSerializer, CustomerSerializer
 
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+
+@method_decorator(csrf_exempt, name='dispatch')
+
 class PaketLaundryGetPost(ListCreateAPIView):
     queryset = PaketLaundry.objects.all()
     serializer_class = PaketLaundrySerializer
